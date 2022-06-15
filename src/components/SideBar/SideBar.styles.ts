@@ -1,4 +1,4 @@
-import sideBarBackground from "../../assets/sideBarBackground.jpg"
+import wall from "../../assets/wall.jpg"
 
 export const sideBarStyles = {
   root: {
@@ -6,7 +6,7 @@ export const sideBarStyles = {
     right: "0",
     height: "100vh",
     width: "45vw",
-    background: `url(${sideBarBackground})`,
+    background: `url(${wall})`,
     borderRadius: "30px 0 0 30px",
     transition: "all .4s",
     boxSizing: "border-box",
@@ -19,7 +19,7 @@ export const sideBarStyles = {
   tab: {
     width: "7vh",
     height: "7vh",
-    background: `url(${sideBarBackground})`,
+    background: `url(${wall})`,
     borderRadius: "50%",
     position: "absolute",
     top: "50%",
@@ -27,6 +27,7 @@ export const sideBarStyles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    filter: "invert(30px)",
 
     "&.active": {
       "svg": {

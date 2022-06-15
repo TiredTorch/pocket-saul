@@ -1,9 +1,10 @@
 import { Box as MuiBox } from "@mui/material"
-import { OrbitControls } from "@react-three/drei"
-import { Canvas, useThree } from "@react-three/fiber"
+import { Canvas } from "@react-three/fiber"
 import { Suspense } from "react"
-import { PerspectiveCamera } from "three"
+import { CameraController } from "../CameraController/CameraControler"
+import { CanvasTitle } from "../CanvasTitle/CanvasTitle"
 import { Room } from "../meshes/Room/Room"
+import { UserSphere } from "../meshes/UserSphere/UserSphere"
 import { mainSceneStyles } from "./MainScene.styles"
 
 export const MainScene = () => {
@@ -13,21 +14,22 @@ export const MainScene = () => {
       component={"div"}
       sx={mainSceneStyles.root}
     >
-      <Canvas 
+      <Canvas
         style={mainSceneStyles.canvas}
-        camera={{far: 200, near: 1}}
       >
-        <OrbitControls 
-          enableZoom={false}
-          rotateSpeed={.1}
-        />
+        <CameraController />
         <Suspense fallback={null}>
+          <CanvasTitle>
+            Sanbek's Home
+          </CanvasTitle>
           <Room />
+          <UserSphere 
+            cameraX={1}
+            cameraY={1}
+          />
         </Suspense>
-
-        <ambientLight intensity={0.2} />
-        <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
-        <pointLight position={[-10, -10, -10]} />
+        <ambientLight position={[0, -6, -1]} intensity={.6}/>
+        <pointLight position={[0, 6, -2]} intensity={.5}/>
       </Canvas>
     </MuiBox>
   )
