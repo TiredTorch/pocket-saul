@@ -3,6 +3,7 @@ import { Box, Typography } from "@mui/material"
 import { ReactComponent as Arrow } from "../../assets/sideBarArrow.svg"
 import { sideBarStyles } from "./SideBar.styles"
 import ReactAudioPlayer from "react-audio-player"
+import { Link } from "react-router-dom"
 
 const sound = require("./../../assets/SaulTheme.mp3")
 
@@ -38,7 +39,10 @@ export const SideBar = () => {
         component={"div"}
         sx={sideBarStyles.mainWrapper}
       >
-        
+        <Link to={"/profile"} style={sideBarStyles.link}>Profile</Link>
+        <Link to={"/friends"} style={sideBarStyles.link}>Friends</Link>
+        <Link to={"/messages"} style={sideBarStyles.link}>Messages</Link>
+        <Link to={"/notifications"} style={sideBarStyles.link}>Notifications</Link>
       </Box>
       <Box
         component={"div"}

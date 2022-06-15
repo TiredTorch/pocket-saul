@@ -16,6 +16,11 @@ export const sideBarStyles = {
       transition: "all .4s",
       right: "-40vw"
     },
+    "&.unwraped": {
+      width: "95vw",
+      transition: "all .4s",
+      right: "0vw"
+    },
     display: "flex",
     flexDirection: "column",
     alignItems: "center"
@@ -26,12 +31,22 @@ export const sideBarStyles = {
     color: "maroon",
     letterSpacing: "2px",
   },
+  link: {
+    textDecoration: "none",
+    fontWeight: "400",
+    fontSize: "4.4vw",
+    color: "lightgreen"
+  },
   mainWrapper: {
     width: "80%",
     height: "100%",
     borderRadius: "30px",
     background: "rgba(0, 0, 0, .5)",
-    padding: "1vw"
+    padding: "1vw",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "space-evenly"
   },
   tab: {
     width: "7vh",
