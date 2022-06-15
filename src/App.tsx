@@ -1,17 +1,20 @@
-import { Container } from "@mui/material"
+import { Box } from "@mui/material"
 import { SideBar } from "./components/SideBar/SideBar"
 import "@fontsource/kaushan-script"
+import { MainScene } from "./components/MainScene/MainScene"
 
 export const App = () => {
   return (
-    <Container 
+    <Box
+      component={"div"}
       sx={{
         maxWidth: "100vw",
         maxHeight: "100vh",
-        overflow: "hidden"
+        overflow: "hidden",
       }}
     >
       <SideBar />
-    </Container>
+      <MainScene />
+    </Box>
   )
 }

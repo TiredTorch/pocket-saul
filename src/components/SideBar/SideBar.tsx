@@ -9,10 +9,12 @@ export const SideBar = () => {
 
   return (
     <Box
+      component={"div"}
       sx={sideBarStyles.root}
       className={activeSideBar ? "active" : ""}
     >
       <Box
+        component={"div"}
         sx={sideBarStyles.tab}
         onClick={() => setActiveSideBar(!activeSideBar)}
         className={activeSideBar ? "active" : ""}

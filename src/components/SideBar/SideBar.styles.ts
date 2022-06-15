@@ -5,14 +5,15 @@ export const sideBarStyles = {
     position: "absolute",
     right: "0",
     height: "100vh",
-    width: "20vw",
+    width: "45vw",
     background: `url(${sideBarBackground})`,
     borderRadius: "30px 0 0 30px",
     transition: "all .4s",
     boxSizing: "border-box",
+    zIndex: 999,
     "&.active": {
       transition: "all .4s",
-      right: "-17vw"
+      right: "-40vw"
     }
   },
   tab: {
