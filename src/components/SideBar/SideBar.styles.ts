@@ -2,6 +2,7 @@ import wall from "../../assets/wall.jpg"
 
 export const sideBarStyles = {
   root: {
+    padding: "1vw",
     position: "absolute",
     right: "0",
     height: "100vh",
@@ -14,7 +15,23 @@ export const sideBarStyles = {
     "&.active": {
       transition: "all .4s",
       right: "-40vw"
-    }
+    },
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center"
+  },
+  text: {
+    fontWeight: "700",
+    fontSize: "2.4vw",
+    color: "maroon",
+    letterSpacing: "2px",
+  },
+  mainWrapper: {
+    width: "80%",
+    height: "100%",
+    borderRadius: "30px",
+    background: "rgba(0, 0, 0, .5)",
+    padding: "1vw"
   },
   tab: {
     width: "7vh",
@@ -23,6 +40,7 @@ export const sideBarStyles = {
     borderRadius: "50%",
     position: "absolute",
     top: "50%",
+    left: "0%",
     transform: "translate(-40%)",
     display: "flex",
     justifyContent: "center",
